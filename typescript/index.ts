@@ -26,8 +26,8 @@ people.forEach(person =>{
     console.log('plus3 :>> ', plus3);
 });
 
-function multiply (x,y) {
-    return x*y;
+function multiply (x:number,y:number) {
+    return x * y;
 }
-const res = multiply("one","two");
+const res = multiply(1, 2);
 console.log('res :>> ', res);
