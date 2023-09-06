@@ -1,6 +1,8 @@
 import "./App.css";
-import About from "./components/About";
-import Home from "./components/Home";
+import About from "./views/About";
+import Home from "./views/Home";
+import Students from "./components/Students";
+import Characters from "./views/Characters";
 
 function App() {
   // JS code here
@@ -11,11 +13,14 @@ function App() {
     <div>
       <h1>Hello React World</h1>
       {/* <Home /> */}
-      <About/>
+      {/* <About/> */}
+      {/* <Students /> */}
+      <Characters/>
 
-      <h2>JSX part</h2>
+      {/* <h2>JSX part</h2> */}
     </div>
   );
 }
 
 export default App;
+
