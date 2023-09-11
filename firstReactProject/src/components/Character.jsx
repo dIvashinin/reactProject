@@ -8,5 +8,4 @@ function Character({character}) {
     </div>
   )
 }
-// foo
 export default Character;
