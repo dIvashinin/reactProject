@@ -1,6 +1,7 @@
 import React from "react";
 
-function ProductCard() {
+function ProductCard(props) {
+    const {product} = props;
   return (
     <div className="flip-card">
       <div className="flip-card-inner">
@@ -12,8 +13,9 @@ function ProductCard() {
           />
         </div>
         <div className="flip-card-back">
-          <h1>{product.title}</h1>
-          <p>{product.price}</p>
+          <h3>{product.title}</h3>
+          <p>{product.category}</p>
+          <p>Price: {product.price} EUR</p>
           <p>{product.description}</p>
         </div>
       </div>

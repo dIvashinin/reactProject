@@ -41,7 +41,7 @@ function Products() {
         <h2>fake store</h2>
             {products.map((product)=>{
 
-                return <ProductCard />;
+                return <ProductCard key={product.id} product={product} />;
 
             //   <div key={product.id}>
             //     <img src={product.image} alt={product.title} />
