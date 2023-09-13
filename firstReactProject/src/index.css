@@ -114,6 +114,7 @@ button:focus-visible {
   font-size: 14px;
   transform: rotateY(180deg);
   padding-left: 4px;
+  padding-right: 4px;
   /* margin: 5px; */
 }
 

@@ -9,7 +9,7 @@ function ProductCard(props) {
           <img
             src={product.image}
             alt="Avatar"
-            style={{ width: "300px", height: "300px" }}
+            style={{ width: "400px", height: "400px" }}
           />
         </div>
         <div className="flip-card-back">
