@@ -72,7 +72,7 @@ button:focus-visible {
 .flip-card {
   background-color: transparent;
   width: 400px;
-  height: 640px;
+  height: 670px;
   margin: 12px;
   /* padding: 12px; */
   /* border: 1px solid #000000; */
@@ -87,6 +87,7 @@ button:focus-visible {
   text-align: center;
   transition: transform 0.8s;
   transform-style: preserve-3d;
+  
 }
 
 /* Do an horizontal flip when you move the mouse over the flip box container */
@@ -132,4 +133,29 @@ font-weight: bold;
 .originalPrice{
   font-size: 10px;
 }
-
+.insideCard, .topInnerText{
+  border: 1px solid #cce7f7;
+  border-radius: 100px;
+  margin-top: 2px;
+  margin-bottom: 8px;
+  margin-left: 2px;
+  margin-right: 2px;
+  background: linear-gradient(to bottom, #c6ddef, #ffffff);
+}
+.cardButton1, .cardButton2{
+  border-radius: 9px;
+  margin: 4px;
+}
+.cardButton1:hover, .cardButton2:hover{
+background-color: #87cafd;
+transition: 1s;
+font-weight: bolder;
+}
+.flip-card-front:hover{
+  background-color: #b4cad9;
+transition: 1.4s;
+}
+img:hover{
+  opacity: 70%;
+  transition: 1.4s;
+}

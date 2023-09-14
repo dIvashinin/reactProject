@@ -16,6 +16,8 @@ import Products from "./views/Products";
 import MyNavbar from "./components/MyNavbar";
 import ErrorPage from "./views/ErrorPage";
 
+
+
 function App() {
 // we create a variable to make router work
 const router = createBrowserRouter(
