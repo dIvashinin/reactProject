@@ -54,9 +54,9 @@ console.log('filteredProducts :>> ', filteredProducts);
     <div>
         <h2>fake store</h2>
     <div>
-        {/* <input type="text" onChange={inputChangeHandler}/> */}
+        <input type="text" onChange={inputChangeHandler}/>
     </div>
-            <SearchBar/>
+            {/* <SearchBar/> */}
 {/* in order to make filter work we need to loop over filtered array */}
             {filteredProducts.map((product)=>{
 
