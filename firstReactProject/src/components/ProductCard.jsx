@@ -38,7 +38,7 @@ function ProductCard(props) {
             <p className="MwSt">VAT included</p>
             {/* <p>{product.description}</p> */}
           </div>
-          <button className="cardButton1">more about</button>
+          <button className="cardButton1" onClick={handleButtonClick}>more about</button>
           <button className="cardButton2">add to cart</button>
         </div>
         {/* <div className="flip-card-back"> */}

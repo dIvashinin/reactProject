@@ -15,6 +15,7 @@ import Characters from "./views/Characters";
 import Products from "./views/Products";
 import MyNavbar from "./components/MyNavbar";
 import ErrorPage from "./views/ErrorPage";
+import Details from "./components/Details";
 
 
 
@@ -25,6 +26,7 @@ const router = createBrowserRouter(
     <Route path="/" element={<Root/>} errorElement={<ErrorPage/>}>
       <Route index element={<Home/>}/>
       <Route path="products" element={<Products/>}/>
+      <Route path="products/:productName" element={<Details/>}/>
       <Route path="about" element={<About/>}/>
       {/* <Route path="*" element={<ErrorPage/>}/> */}
 
