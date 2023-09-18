@@ -1,9 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
+import {Link, useNavigate} from 'react-router-dom'
+import ProductDetails from "./ProductDetails";
+
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faHeart } from "@fortawesome/free-solid-svg-icons";
 
 function ProductCard(props) {
   const { product } = props;
+  const [showDetails, setShowDetails] = useState(false);
+const navigateTo = useNavigate()
+  const handleButtonClick = () => {
+    setShowDetails(true);
+    
+  };
+
+  const handleCloseClick = () => {
+    setShowDetails(false);
+  };
+
   return (
     <div className="flip-card">
       <div className="flip-card-inner">
@@ -11,11 +25,15 @@ function ProductCard(props) {
           <div className="topInnerText">
             <h5>{product.title}</h5>
           </div>
+          <Link to={`${product.id}`}>
           <img
             src={product.image}
+            
             alt="Avatar"
             style={{ width: "390px", height: "390px" }}
+            
           />
+          </Link>
           {/* <div className="favorite-icon">
             <FontAwesomeIcon icon={faHeart} />
           </div> */}
@@ -38,7 +56,13 @@ function ProductCard(props) {
             <p className="MwSt">VAT included</p>
             {/* <p>{product.description}</p> */}
           </div>
-          <button className="cardButton1" onClick={handleButtonClick}>more about</button>
+          {/* <button className="cardButton1" 
+          onClick={()=> {
+            navigateTo(`${product.id}`)
+          }}
+          >more about</button> */}
+        
+          <Link to={`${product.id}`}>More about - link</Link>
           <button className="cardButton2">add to cart</button>
         </div>
         {/* <div className="flip-card-back"> */}
@@ -48,6 +72,9 @@ function ProductCard(props) {
         {/* <h2>{product.description}</h2> */}
         {/* </div> */}
       </div>
+      {showDetails && (
+        <ProductDetails product={product} onCloseClick={handleCloseClick} />
+      )}
     </div>
   );
 }
