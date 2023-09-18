@@ -8,6 +8,7 @@ function ErrorPage() {
     <>
     <h2>Looks like you you're not supposed to be here. Pls check what you have typed</h2>
     <h3>{error.error.message}</h3>
+    
     </>
   );
 }

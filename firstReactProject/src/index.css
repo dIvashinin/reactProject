@@ -156,6 +156,18 @@ font-weight: bolder;
 transition: 1.4s;
 }
 img:hover{
-  opacity: 70%;
+  opacity: 90%;
   transition: 1.4s;
+}
+.back{
+  color: #ff0000;
+  background-color: #b4cad9;
+}
+.next{
+  color: rgb(121, 80, 5);
+  background-color: #adb1f7;
+  
+}
+Link:visited{
+  color: #213547;
 }

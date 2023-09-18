@@ -30,21 +30,19 @@ if (!product) {
 }
 
 return (
-    <>
+    <div className="">
       <h1>Details</h1>
-      
-      <Link to={product/`${product.id}`}>
-        <img src={product.image} alt="" style={{ width: "390px", height: "390px" }}/>
-        </Link>
       <h2>{product.category}</h2>
       <h2>{product.title}</h2>
+      <img src={product.image} alt="" style={{ width: "490px", height: "490px" }}/>
       <h4>{product.description}</h4>
-      <h5>{product.price}</h5>
-      <button>back</button>
-
+      <h5>{product.price.toFixed(2)} €</h5>
+      <Link className='back' to={'/products'}>back to products</Link> 
+      <Link className='next' to={`/products/${product.id+1}`}> next item</Link>
+      
 
       {/* <button onClick={onCloseClick}>Close</button> */}
-      </>
+      </div>
   );
   
 

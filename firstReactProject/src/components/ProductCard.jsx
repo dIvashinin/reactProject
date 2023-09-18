@@ -14,9 +14,9 @@ const navigateTo = useNavigate()
     
   };
 
-  const handleCloseClick = () => {
-    setShowDetails(false);
-  };
+//   const handleCloseClick = () => {
+//     setShowDetails(false);
+//   };
 
   return (
     <div className="flip-card">
