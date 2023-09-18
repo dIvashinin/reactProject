@@ -37,21 +37,20 @@ return (
       <img src={product.image} alt="" style={{ width: "490px", height: "490px" }}/>
       <h4>{product.description}</h4>
       <h5>{product.price.toFixed(2)} €</h5>
-      <Link className='back' to={'/products'}>back to products</Link> 
-      <Link className='next' to={`/products/${product.id+1}`}> next item</Link>
-      
+      <Link className='back' to={'/products'}>Back to products</Link> 
+      {/* <Link className='next' to={`/products/${product.id+1}`}> next item</Link> */}
+      {parseInt(productId, 10) < 20 ? (
+        <Link className="next" to={`/products/${parseInt(productId, 10) + 1}`}> 
+           Next item
+        </Link>
+      ) : (
+        <p>This is the last item.</p>
+      )}
 
       {/* <button onClick={onCloseClick}>Close</button> */}
       </div>
+      
   );
-  
-
-    // fetch('https://fakestoreapi.com/products/{data.id}')
-// };
-
-//   return (
-    // <h3>See more info about {productName} </h3>
-//   )
 }
 
 export default ProductDetails;

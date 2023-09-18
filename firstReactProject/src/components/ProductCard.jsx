@@ -62,7 +62,7 @@ const navigateTo = useNavigate()
           }}
           >more about</button> */}
         
-          <Link to={`${product.id}`}>More about - link</Link>
+          <Link className="more" to={`${product.id}`}>more about...</Link>
           <button className="cardButton2">add to cart</button>
         </div>
         {/* <div className="flip-card-back"> */}

@@ -149,7 +149,7 @@ font-weight: bold;
 .cardButton1:hover, .cardButton2:hover{
 background-color: #87cafd;
 transition: 1s;
-font-weight: bolder;
+/* font-weight: bolder; */
 }
 .flip-card-front:hover{
   background-color: #b4cad9;
@@ -162,12 +162,27 @@ img:hover{
 .back{
   color: #ff0000;
   background-color: #b4cad9;
+  margin-right: 10px;
 }
 .next{
   color: rgb(121, 80, 5);
   background-color: #adb1f7;
   
 }
-Link:visited{
+/* .next:visited, .back:visited{
   color: #213547;
+} */
+
+.more{
+  background-color: #e7e7e7;
+  padding: 10px;
+  color: #1a1a1a;
+  border-radius: 9px;
+}
+.more:hover{
+  background-color: #87cafd;
+  transition: 1s;
+  /* font-weight: bolder;  */
+  color: #1a1a1a;
+  border: 1px solid #000000;
 }
