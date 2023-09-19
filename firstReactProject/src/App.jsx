@@ -17,6 +17,7 @@ import MyNavbar from "./components/MyNavbar";
 import ErrorPage from "./views/ErrorPage";
 
 import ProductDetails from "./components/ProductDetails";
+import Footer from "./components/Footer";
 
 
 
@@ -64,6 +65,8 @@ const Root = () => {
     {/* <h1>fake is fake</h1> */}
     <MyNavbar/>
     <Outlet/>
+    <Footer/>
+    
     </>
   )
 }

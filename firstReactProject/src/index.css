@@ -29,6 +29,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background-color: #ffffff;
 }
 
 h1 {
@@ -185,4 +186,17 @@ img:hover{
   /* font-weight: bolder;  */
   color: #1a1a1a;
   border: 1px solid #000000;
+}
+.active{
+  font-weight: bolder;
+  
+}
+.fake{
+  height: 300px;
+  width: 300px;
+}
+.home, .about{
+  background-color: #e2eaef;
+  padding-bottom: 60px;
+  /* margin:30px; */
 }

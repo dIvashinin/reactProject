@@ -3,14 +3,14 @@ import Navbar from "../components/Navbar";
 
 function Home() {
   return (
-    <div>
-      <h1>Home Page</h1>
+    <div className="home">
+      <h1>FAKE.STORE home</h1>
 
       <Navbar />
 
-      <section>main content</section>
-       
-      <Footer />
+      <section>this is a home page of HOME.STORE</section>
+      <img className="fake" src="/pics/fake.jpeg" alt="" />
+      {/* <Footer /> */}
 
     </div>
   );

@@ -3,7 +3,8 @@ import React from 'react';
 function Footer() {
   return (
     <footer>
-        <p>contact details</p>
+        <a href="#">contact</a> | 
+        <a href="#"> legal</a>
       </footer>
   );
 }

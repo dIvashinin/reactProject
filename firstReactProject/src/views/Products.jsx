@@ -52,7 +52,8 @@ console.log('filteredProducts :>> ', filteredProducts);
    
    return (
     <div>
-        <h2>fake store</h2>
+        <h1>FAKE.STORE</h1>
+        
     <div>
         <input type="text" placeholder='search me...' onChange={inputChangeHandler}/>
     </div>
@@ -67,8 +68,12 @@ console.log('filteredProducts :>> ', filteredProducts);
             //     {product.price} 
             //     {product.description}</div> 
             })}
+            
         </div>
-   );  
+        
+   ); 
+    
 }
+
 
 export default Products;

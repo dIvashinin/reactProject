@@ -4,14 +4,14 @@ import Footer from "../components/Footer";
 
 function About() {
   return (
-    <div>
-      <h1>About Page</h1>
+    <div className="about">
+      <h1>FAKE.STORE about</h1>
 
       <Navbar />
 
-      <section>main content</section>
-
-      <Footer />
+      <section>here you can find some info about the FAKE.STORE</section>
+      <img className="fake" src="/pics/fake.jpeg" alt="" />
+      {/* <Footer /> */}
 
     </div>
   );
