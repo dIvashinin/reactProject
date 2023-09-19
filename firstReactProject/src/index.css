@@ -200,3 +200,19 @@ img:hover{
   padding-bottom: 60px;
   /* margin:30px; */
 }
+.hover-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: white;
+  padding: 0px;
+  transform: translateY(200%); /* Initially move the text above the image */
+  opacity: 0; /* Initially hidden */
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Add transition for smooth effect */
+}
+
+.flip-card-front:hover .hover-text {
+  transform: translateY(400%); /* Move the text back to its original position */
+  opacity: 1; /* Make the text visible on hover */
+}

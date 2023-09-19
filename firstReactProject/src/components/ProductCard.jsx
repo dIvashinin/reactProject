@@ -30,9 +30,12 @@ const navigateTo = useNavigate()
             src={product.image}
             
             alt="Avatar"
-            style={{ width: "390px", height: "390px" }}
-            
+            style={{ width: "390px", height: "390px" }}  
           />
+            <div className="hover-text">
+          {/* Additional text to display on hover */}
+          <p>click for details</p>
+        </div>
           </Link>
           {/* <div className="favorite-icon">
             <FontAwesomeIcon icon={faHeart} />
