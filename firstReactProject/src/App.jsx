@@ -20,6 +20,7 @@ import ProductDetails from "./components/ProductDetails";
 import Footer from "./components/Footer";
 import { ProductsContextProvider } from "./context/ProductsContext";
 import ProtectedRoute from "./components/ProtectedRoute";
+import Register from "./views/Register";
 
 
 
@@ -30,6 +31,7 @@ const router = createBrowserRouter(
     <Route path="/" element={<Root/>} errorElement={<ErrorPage/>}>
       <Route index element={<Home/>}/>
       <Route path="products" element={<Products/>}/>
+      <Route path="register" element={<Register/>}/>
       <Route path="products/:productId" element={<ProductDetails/>}/>
       <Route path="about" element={
       <ProtectedRoute>
