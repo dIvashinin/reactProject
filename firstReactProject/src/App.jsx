@@ -18,6 +18,7 @@ import ErrorPage from "./views/ErrorPage";
 
 import ProductDetails from "./components/ProductDetails";
 import Footer from "./components/Footer";
+import { ProductsContextProvider } from "./context/ProductsContext";
 
 
 
@@ -43,6 +44,7 @@ const router = createBrowserRouter(
 
   return (
     <div>
+      <ProductsContextProvider>
       {/* <h1>Hello React World</h1> */}
       {/* <Home /> */}
       {/* <About/> */}
@@ -51,9 +53,10 @@ const router = createBrowserRouter(
       {/* <Products/> */}
       
       <RouterProvider router={router}/>
-      <Outlet/>
+      {/* <Outlet/> */}
 
       {/* <h2>JSX part</h2> */}
+      </ProductsContextProvider>
     </div>
   );
 }

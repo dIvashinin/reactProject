@@ -1,21 +1,21 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import ProductCard from '../components/ProductCard';
 import SearchBar from '../components/SearchBar';
+import { ProductsContext } from '../context/ProductsContext';
 
 function Products() {
 
-    const [products, setProducts] = useState([]);
+    // Subscribe component to the context
+    const {products, fetchProducts} = useContext(ProductsContext);
+    
+
+    // const [products, setProducts] = useState([]);
     const [error, setError] = useState(false);
 
-    const [inputText, setInputText] = useState("")
+    const [inputText, setInputText] = useState("");
 
     // i'm using a shorter way to fetch: async/ await
-    const fetchProducts = async() => {
-        const response = await fetch ('https://fakestoreapi.com/products');
-        const data = await response.json();
-        console.log('data :>> ', data);
-        setProducts(data);   
-    }
+    // fetch goes now to ProductsContext
     // a bit longer way to fetch
     // const fetchProducts = () => {
     //     fetch ('https://fakestoreapi.com/products')

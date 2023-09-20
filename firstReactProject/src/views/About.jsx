@@ -10,6 +10,8 @@ function About() {
       <Navbar />
 
       <section>here you can find some info about the FAKE.STORE</section>
+      <section>what is our mission and goal</section>
+      <section>and who is behind it</section>
       <img className="fake" src="/pics/fake.jpeg" alt="" />
       {/* <Footer /> */}
 
