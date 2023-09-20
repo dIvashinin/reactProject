@@ -16,7 +16,7 @@ function ErrorPage() {
   return (
     <>
     <h2>Looks like you you're not supposed to be here. Pls check what you have typed</h2>
-    {/* <h3>{error.error.message}</h3> */}
+    <h3>{error.error.message}</h3>
     <button onClick={goHome}>go back</button>
     
     </>

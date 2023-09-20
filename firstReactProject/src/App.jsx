@@ -19,6 +19,7 @@ import ErrorPage from "./views/ErrorPage";
 import ProductDetails from "./components/ProductDetails";
 import Footer from "./components/Footer";
 import { ProductsContextProvider } from "./context/ProductsContext";
+import ProtectedRoute from "./components/ProtectedRoute";
 
 
 
@@ -30,8 +31,11 @@ const router = createBrowserRouter(
       <Route index element={<Home/>}/>
       <Route path="products" element={<Products/>}/>
       <Route path="products/:productId" element={<ProductDetails/>}/>
-      <Route path="about" element={<About/>}/>
-      {/* <Route path="*" element={<ErrorPage/>}/> */}
+      <Route path="about" element={
+      <ProtectedRoute>
+      <About/>
+      </ProtectedRoute>}/>
+       {/* <Route path="*" element={<ErrorPage/>}/> */}
 
     </Route>
   )
