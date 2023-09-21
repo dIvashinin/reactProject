@@ -38,8 +38,6 @@ const calculateMinMaxPrice = (products) => {
 };
 
 
-
-
 // Call the function to get min and max prices
 const { minPrice, maxPrice } = calculateMinMaxPrice(products);
 

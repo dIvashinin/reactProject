@@ -17,19 +17,48 @@ export const AuthContextProvider = ({children}) => {
     setUser(null);
  };
 
-const register = (email, password) => {
-console.log('email, password :>> ', email, password);
-createUserWithEmailAndPassword (auth, email, password)
-  .then((userCredential) => {
-    // Signed in 
+// here the original from google, we will transform it into async/ await
+// const register = (email, password) => {
+// console.log('email, password :>> ', email, password);
+// createUserWithEmailAndPassword (auth, email, password)
+//   .then((userCredential) => {
+//     // Signed in 
+//     const user = userCredential.user;
+//     console.log('register success :>> ', user);
+//   })
+//   .catch((error) => {
+//     const errorCode = error.code;
+//     const errorMessage = error.message;
+//     // ..
+//   });
+
+  const register = async (email, password) => {
+    // console.log('email, password :>> ', email, password);
+    // createUserWithEmailAndPassword (auth, email, password)
+    //   .then((userCredential) => {
+    //     // Signed in 
+    //     const user = userCredential.user;
+    //     console.log('register success :>> ', user);
+    //   })
+    //   .catch((error) => {
+    //     const errorCode = error.code;
+    //     const errorMessage = error.message;
+    //     console.log('register went wrong :>> ', error);
+    //   });
+
+// redoing it in async/await
+try {
+    const userCredential = await createUserWithEmailAndPassword (auth, email, password);
+    
     const user = userCredential.user;
-    console.log('register success :>> ', user);
-  })
-  .catch((error) => {
+            console.log('register success :>> ', user);
+    
+} catch (error) {
     const errorCode = error.code;
     const errorMessage = error.message;
-    // ..
-  });
+    console.log('register went wrong :>> ', error);   
+}
+
 };
 const contextValue = {user, setUser, logout,register};
  
