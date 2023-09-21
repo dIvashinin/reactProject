@@ -21,6 +21,7 @@ import Footer from "./components/Footer";
 import { ProductsContextProvider } from "./context/ProductsContext";
 import ProtectedRoute from "./components/ProtectedRoute";
 import Register from "./views/Register";
+import { AuthContextProvider } from "./context/AuthContext";
 
 
 
@@ -50,7 +51,9 @@ const router = createBrowserRouter(
 
   return (
     <div>
-      <ProductsContextProvider>
+      <AuthContextProvider>
+
+        <ProductsContextProvider>
       {/* <h1>Hello React World</h1> */}
       {/* <Home /> */}
       {/* <About/> */}
@@ -63,6 +66,8 @@ const router = createBrowserRouter(
 
       {/* <h2>JSX part</h2> */}
       </ProductsContextProvider>
+      </AuthContextProvider>
+      
     </div>
   );
 }
