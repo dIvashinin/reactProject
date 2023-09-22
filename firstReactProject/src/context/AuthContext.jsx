@@ -1,7 +1,8 @@
-import { ReactNode, createContext, useState } from "react";
+import { ReactNode, createContext, useEffect, useState } from "react";
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  onAuthStateChanged
 } from "firebase/auth";
 import { auth } from "../config/firebaseConfig";
 
@@ -84,6 +85,25 @@ export const AuthContextProvider = ({ children }) => {
       console.log("errorCode :>> ", errorCode);
     }
   };
+
+  const checkIfUserIsActive = () =>{
+    onAuthStateChanged(auth, (user) => {
+        if (user) {
+          // User is signed in, see docs for a list of available properties
+          // https://firebase.google.com/docs/reference/js/auth.user
+          const uid = user.uid;
+          console.log('user is still logged in');
+          console.log('uid :>> ', uid);
+        } else {
+          console.log('user is logged out');
+        }
+      });
+  };
+
+  useEffect(() => {
+  checkIfUserIsActive();
+  }, []);
+  
 
   const contextValue = { user, setUser, logout, register, login };
 
