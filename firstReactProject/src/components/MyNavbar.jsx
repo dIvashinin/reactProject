@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../context/AuthContext";
 
 function MyNavbar() {
+
+  const {user, setUser, logout} = useContext (AuthContext);
+
   return (
     <nav>
       <NavLink to="/">Home</NavLink> | <NavLink to="products">Products</NavLink>{" "}

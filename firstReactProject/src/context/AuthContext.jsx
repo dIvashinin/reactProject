@@ -2,7 +2,9 @@ import { ReactNode, createContext, useEffect, useState } from "react";
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
-  onAuthStateChanged
+  onAuthStateChanged,
+  getAuth,
+  signOut
 } from "firebase/auth";
 import { auth } from "../config/firebaseConfig";
 
@@ -18,7 +20,17 @@ export const AuthContextProvider = ({ children }) => {
   const [user, setUser] = useState(null);
 
   const logout = () => {
-    setUser(null);
+    const auth = getAuth();
+    signOut(auth)
+      .then(() => {
+        // Sign-out successful.
+        setUser(null);
+      })
+      .catch((error) => {
+        // An error happened.
+        console.log('error signing out :>> ', error);
+      });
+
   };
 
   // here the original from google, we will transform it into async/ await below
@@ -86,24 +98,29 @@ export const AuthContextProvider = ({ children }) => {
     }
   };
 
-  const checkIfUserIsActive = () =>{
+  const checkIfUserIsActive = () => {
     onAuthStateChanged(auth, (user) => {
-        if (user) {
-          // User is signed in, see docs for a list of available properties
-          // https://firebase.google.com/docs/reference/js/auth.user
-          const uid = user.uid;
-          console.log('user is still logged in');
-          console.log('uid :>> ', uid);
-        } else {
-          console.log('user is logged out');
-        }
-      });
+      if (user) {
+        // User is signed in, see docs for a list of available properties
+        // https://firebase.google.com/docs/reference/js/auth.user
+        const uid = user.uid;
+        console.log("user is still logged in");
+        console.log("uid :>> ", uid);
+        //we can see our user
+        console.log("user :>> ", user);
+        //so we use this to update our user which is null after refresh
+        setUser(user);
+      } else {
+        console.log("user is logged out");
+        //just in case we keep our user null
+        setUser(null);
+      }
+    });
   };
 
   useEffect(() => {
-  checkIfUserIsActive();
+    checkIfUserIsActive();
   }, []);
-  
 
   const contextValue = { user, setUser, logout, register, login };
 
