@@ -14,7 +14,6 @@ function About() {
       <section>and who is behind it</section>
       <img className="fake" src="/pics/fake.jpeg" alt="" />
       {/* <Footer /> */}
-
     </div>
   );
 }

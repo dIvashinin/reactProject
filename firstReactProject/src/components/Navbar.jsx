@@ -1,11 +1,10 @@
-import React from 'react'
+import React from "react";
 
 function Navbar() {
   return (
     <nav>
-        <a href="">this</a> | 
-        <a href=""> that</a>
-      </nav>
+      <a href="">this</a> |<a href=""> that</a>
+    </nav>
   );
 }
 
