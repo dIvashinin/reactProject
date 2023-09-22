@@ -22,6 +22,7 @@ import { ProductsContextProvider } from "./context/ProductsContext";
 import ProtectedRoute from "./components/ProtectedRoute";
 import Register from "./views/Register";
 import { AuthContextProvider } from "./context/AuthContext";
+import Login from "./views/Login";
 
 
 
@@ -33,6 +34,7 @@ const router = createBrowserRouter(
       <Route index element={<Home/>}/>
       <Route path="products" element={<Products/>}/>
       <Route path="register" element={<Register/>}/>
+      <Route path="login" element={<Login/>}/>
       <Route path="products/:productId" element={<ProductDetails/>}/>
       <Route path="about" element={
       <ProtectedRoute>

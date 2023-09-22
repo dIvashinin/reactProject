@@ -1,5 +1,5 @@
 import { ReactNode, createContext, useState } from "react";
-import {createUserWithEmailAndPassword} from "firebase/auth";
+import {createUserWithEmailAndPassword,signInWithEmailAndPassword} from "firebase/auth";
 import {auth} from "../config/firebaseConfig";
 
 const AuthInitContext = {};
@@ -17,7 +17,7 @@ export const AuthContextProvider = ({children}) => {
     setUser(null);
  };
 
-// here the original from google, we will transform it into async/ await
+// here the original from google, we will transform it into async/ await below
 // const register = (email, password) => {
 // console.log('email, password :>> ', email, password);
 // createUserWithEmailAndPassword (auth, email, password)
@@ -32,6 +32,7 @@ export const AuthContextProvider = ({children}) => {
 //     // ..
 //   });
 
+// redoing it in async/await
   const register = async (email, password) => {
     // console.log('email, password :>> ', email, password);
     // createUserWithEmailAndPassword (auth, email, password)
@@ -46,7 +47,6 @@ export const AuthContextProvider = ({children}) => {
     //     console.log('register went wrong :>> ', error);
     //   });
 
-// redoing it in async/await
 try {
     const userCredential = await createUserWithEmailAndPassword (auth, email, password);
     
@@ -60,7 +60,22 @@ try {
 }
 
 };
-const contextValue = {user, setUser, logout,register};
+
+const login = async (email, password) => {
+try {
+    const userCredential = await signInWithEmailAndPassword(auth, email, password);
+    const user = userCredential.user;
+    console.log('login success :>> ', user);
+    
+} catch (error) {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    console.log('login went wrong :>> ', error); 
+};
+
+};   
+
+const contextValue = {user, setUser, logout,register,login};
  
  return (
     <AuthContext.Provider value ={contextValue}>
