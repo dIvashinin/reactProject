@@ -156,6 +156,7 @@ transition: 1s;
   background-color: #b4cad9;
 transition: 1.4s;
 }
+
 img:hover{
   opacity: 90%;
   transition: 1.4s;
@@ -170,9 +171,7 @@ img:hover{
   background-color: #adb1f7;
   
 }
-/* .next:visited, .back:visited{
-  color: #213547;
-} */
+
 
 .more{
   background-color: #e7e7e7;
@@ -190,6 +189,7 @@ img:hover{
 .active{
   font-weight: bolder;
   
+
 }
 .fake{
   height: 300px;
