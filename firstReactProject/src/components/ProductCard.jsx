@@ -1,12 +1,17 @@
 import React, { useState } from "react";
 import {Link, useNavigate} from 'react-router-dom'
 import ProductDetails from "./ProductDetails";
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+
 
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faHeart } from "@fortawesome/free-solid-svg-icons";
 
 function ProductCard(props) {
   const { product } = props;
+  console.log("hello");
   const [showDetails, setShowDetails] = useState(false);
 const navigateTo = useNavigate()
   const handleButtonClick = () => {
@@ -19,18 +24,27 @@ const navigateTo = useNavigate()
 //   };
 
   return (
-    <div className="flip-card">
-      <div className="flip-card-inner">
-        <div className="flip-card-front">
+    
+    // here goes bootstrap grid
+    
+
+
+
+   // my initial card 
+   
+    <Col sm={12} md={6} lg={4} xl={3}>
+      <div className="">
+        {/* Small screens: 1 product per row */}
+        <div className="image-container">
           <div className="topInnerText">
             <h5>{product.title}</h5>
           </div>
           <Link to={`${product.id}`}>
-          <img
+          <img className="image-responsive"
             src={product.image}
             
             alt="Avatar"
-            style={{ width: "390px", height: "390px" }}  
+            // style={{ width: "250px", height: "250px" }}  
           />
             <div className="hover-text">
           {/* Additional text to display on hover */}
@@ -78,7 +92,8 @@ const navigateTo = useNavigate()
       {showDetails && (
         <ProductDetails product={product} onCloseClick={handleCloseClick} />
       )}
-    </div>
+    </Col>
+    
   );
 }
 

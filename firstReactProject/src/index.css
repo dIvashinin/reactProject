@@ -90,6 +90,18 @@ button:focus-visible {
   transform-style: preserve-3d;
   
 }
+/* styles.css */
+.image-responsive {
+  max-width: 100%; /* Image will never exceed its parent's width */
+  height: auto;    /* Height adjusts automatically to maintain aspect ratio */
+}
+/* styles.css */
+.image-container {
+  height: auto; /* You can adjust the fixed height as needed */
+  overflow: hidden; /* Ensures that images within the container don't overflow */
+}
+
+
 
 /* Do an horizontal flip when you move the mouse over the flip box container */
 .flip-card:hover .flip-card-inner {

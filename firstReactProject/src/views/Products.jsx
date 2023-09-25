@@ -2,6 +2,9 @@ import React, { useContext, useEffect, useState } from 'react';
 import ProductCard from '../components/ProductCard';
 import SearchBar from '../components/SearchBar';
 import { ProductsContext } from '../context/ProductsContext';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 function Products() {
 
@@ -57,6 +60,8 @@ console.log('filteredProducts :>> ', filteredProducts);
     <div>
         <input type="text" placeholder='search me...' onChange={inputChangeHandler}/>
     </div>
+    <Container fluid>
+    <Row >
             {/* <SearchBar/> */}
 {/* in order to make filter work we need to loop over filtered array */}
             {filteredProducts.map((product)=>{
@@ -68,6 +73,8 @@ console.log('filteredProducts :>> ', filteredProducts);
             //     {product.price} 
             //     {product.description}</div> 
             })}
+            </Row>
+    </Container>
             
         </div>
         
