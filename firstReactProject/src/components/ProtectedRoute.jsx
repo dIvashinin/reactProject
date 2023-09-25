@@ -7,7 +7,7 @@ function ProtectedRoute(props) {
   // this bouncer will check you and let you in or not
   return (
     <div>
-      
+      {/* if user is true we go to children, if not we see message sorry... */}
       {user ? props.children : <h2>sorry but you are not allowed here</h2>}
     </div>
   );
