@@ -32,7 +32,7 @@ const navigateTo = useNavigate()
 
 
    // my initial card 
-    <Col xs ={4} sm={4} md={3} lg={3} xl={3} className="card-inside">
+    <Col xs ={12} sm={6} md={3} lg={3} xl={3} className="card-inside">
         {/* <div className="card-inside"> */}
         
       {/* <div className=""> */}
@@ -40,23 +40,24 @@ const navigateTo = useNavigate()
           {/* <div className="topInnerText"> */}
             {/* <h5>{product.title}</h5> */}
           {/* </div> */}
-          {/* <Link to={`${product.id}`}> */}
+          <Link to={`${product.id}`}>
           <Image className="image-responsive"
             src={product.image} 
             alt="Avatar"
-            // style={{ width: "200px", height: "250px" }}  
+            style={{ width: "220px", height: "270px" }}  
           />
-            {/* <div className="hover-text"> */}
+            <div className="hover-text">
           {/* Additional text to display on hover */}
-          {/* <p>click for details</p> */}
-        {/* </div> */}
-          {/* </Link> */}
+          <p>click for details</p>
+        </div>
+          </Link>
           {/* <div className="favorite-icon">
             <FontAwesomeIcon icon={faHeart} />
           </div> */}
           {/* <div className="insideCard"> */}
             <div className="stuff-inside-card">
-            {product.category}
+            {/* {product.category} */}
+            <h6>{product.title}</h6>
             <p>New price: {product.price.toFixed(2)} €</p>
             <p className="originalPrice">
               Originally:{" "}

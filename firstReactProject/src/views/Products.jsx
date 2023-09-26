@@ -54,8 +54,8 @@ console.log('filteredProducts :>> ', filteredProducts);
    }, []);
    
    return (
-    <div>
-        <h1>FAKE.STORE</h1>
+    <div className='sticky-header'>
+        <h1 className='fake-store'>FAKE.STORE</h1>
         
     <div>
         <input type="text" placeholder='search me...' onChange={inputChangeHandler}/>
