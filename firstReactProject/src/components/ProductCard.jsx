@@ -32,7 +32,7 @@ const navigateTo = useNavigate()
 
 
    // my initial card 
-    <Col xs ={12} sm={6} md={3} lg={3} xl={3} className="card-inside">
+    <Col xs ={12} sm={6} md={4} lg={3} xl={3} className="card-inside">
         {/* <div className="card-inside"> */}
         
       {/* <div className=""> */}
@@ -51,9 +51,7 @@ const navigateTo = useNavigate()
           <p>click for details</p>
         </div>
           </Link>
-          {/* <div className="favorite-icon">
-            <FontAwesomeIcon icon={faHeart} />
-          </div> */}
+        
           {/* <div className="insideCard"> */}
             <div className="stuff-inside-card">
             {/* {product.category} */}
@@ -83,6 +81,22 @@ const navigateTo = useNavigate()
         
           <Link className="more" to={`${product.id}`}>more about...</Link>
           <button className="cardButton2">add to cart</button>
+          {/*  */}
+          {/* <Link> */}
+          <div className="icon-container">
+            *
+          {/* <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="26"
+        height="26"
+        fill="darkred"
+        className="bi bi-heart"
+        viewBox="0 0 16 16"
+      >
+        <path d="M8 14s-1.5-2.166-3-3.5C3.5 9.166 2 7 2 4.5 2 2.5 3.5 1 5.5 1c1.305 0 2.498.791 3 1.999C8.002 1.791 9.195 1 10.5 1 12.5 1 14 2.5 14 4.5c0 2.5-1.5 4.666-3 6.5-1.5 1.334-3 3.5-3 3.5z" />
+      </svg> */}
+          </div>
+          {/* </Link> */}
           </div>
         {/* </div> */}
         {/* <div className="flip-card-back"> */}

@@ -25,6 +25,7 @@ a:hover {
 
 #root{
   padding: 0;
+  
 }
 /* .fake-store{
   position: sticky;
@@ -40,6 +41,7 @@ body {
   min-width: 320px;
   min-height: 100vh;
   background-color: #ffffff;
+  
 }
 
 h1 {
@@ -109,7 +111,7 @@ button:focus-visible {
   /* border-style: double 2px; */
   padding: 4px;
   margin-top: 4px;
-  border: 3px solid #858585;
+  border: 1px solid #858585;
   /* margin-right: 1px; */
   /* margin: 1px; */
   /* height: 600px; */
@@ -164,6 +166,16 @@ p, h1,h2,h3,h4,h5,h6{
   white-space: nowrap; /* Prevent text from wrapping to the next line */
   overflow: hidden; /* Hide any overflowing text */
   text-overflow: ellipsis; /* Display ellipsis (...) for overflowed text */
+}
+.icon-container{
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 8px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 0 0 0 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .MwSt{
@@ -227,9 +239,10 @@ img:hover{
 }
 .active{
   font-weight: bolder;
-  
-
 }
+
+
+
 .fake{
   height: 300px;
   width: 300px;
