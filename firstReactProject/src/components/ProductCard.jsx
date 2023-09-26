@@ -32,67 +32,69 @@ const navigateTo = useNavigate()
 
 
    // my initial card 
-   
-    <Col sm={12} md={6} lg={4} xl={3}>
-      <div className="">
-        {/* Small screens: 1 product per row */}
-        <div className="image-container">
-          <div className="topInnerText">
-            <h5>{product.title}</h5>
-          </div>
-          <Link to={`${product.id}`}>
+    <Col xs ={4} sm={4} md={3} lg={3} xl={3} className="card-inside">
+        {/* <div className="card-inside"> */}
+        
+      {/* <div className=""> */}
+        {/* <div className="image-container"> */}
+          {/* <div className="topInnerText"> */}
+            {/* <h5>{product.title}</h5> */}
+          {/* </div> */}
+          {/* <Link to={`${product.id}`}> */}
           <Image className="image-responsive"
-            src={product.image} thumbnail
-            
+            src={product.image} 
             alt="Avatar"
-            // style={{ width: "250px", height: "250px" }}  
+            // style={{ width: "200px", height: "250px" }}  
           />
-            <div className="hover-text">
+            {/* <div className="hover-text"> */}
           {/* Additional text to display on hover */}
-          <p>click for details</p>
-        </div>
-          </Link>
+          {/* <p>click for details</p> */}
+        {/* </div> */}
+          {/* </Link> */}
           {/* <div className="favorite-icon">
             <FontAwesomeIcon icon={faHeart} />
           </div> */}
-          <div className="insideCard">
-            {/* <p>{product.category}</p> */}
+          {/* <div className="insideCard"> */}
+            <div className="stuff-inside-card">
+            {product.category}
             <p>New price: {product.price.toFixed(2)} €</p>
             <p className="originalPrice">
               Originally:{" "}
               <span
-                style={{
-                  color: "orange",
-                  fontSize: "1.1rem",
-                  textDecoration: "line-through",
-                }}
-              >
+                 style={{
+                    color: "orange",
+                   fontSize: "1.1rem",
+                   textDecoration: "line-through",
+                  }}
+               >
                 {(product.price * 2).toFixed(1)} €
               </span>
               <span style={{ fontSize: "1.2rem" }}> -50% off</span>
             </p>
-            <p className="MwSt">VAT included</p>
+            {/* <p className="MwSt">VAT included</p> */}
             {/* <p>{product.description}</p> */}
-          </div>
-          {/* <button className="cardButton1" 
+          {/* </div> */}
+          {/* <button className="cardButton1"
           onClick={()=> {
             navigateTo(`${product.id}`)
           }}
-          >more about</button> */}
+          >more about</button>  */}
         
           <Link className="more" to={`${product.id}`}>more about...</Link>
           <button className="cardButton2">add to cart</button>
-        </div>
+          </div>
+        {/* </div> */}
         {/* <div className="flip-card-back"> */}
         {/* <h3>{product.title}</h3>
           <p>{product.category}</p>
           <p>Price: {product.price} EUR</p> */}
         {/* <h2>{product.description}</h2> */}
         {/* </div> */}
-      </div>
+      {/* </div> */}
       {showDetails && (
         <ProductDetails product={product} onCloseClick={handleCloseClick} />
       )}
+      {/* </div> */}
     </Col>
     
   );

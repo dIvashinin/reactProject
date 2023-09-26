@@ -27,7 +27,7 @@ function MyNavbar() {
       </Navbar>
       </>
 
-
+    // my first variant
     // <nav>
     //   <NavLink to="/">Home</NavLink> | <NavLink to="products">Products</NavLink>{" "}
     //   | <NavLink to="about">About</NavLink> |{" "}
