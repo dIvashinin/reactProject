@@ -4,6 +4,7 @@ import ProductDetails from "./ProductDetails";
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import Image from 'react-bootstrap/Image';
 
 
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -40,8 +41,8 @@ const navigateTo = useNavigate()
             <h5>{product.title}</h5>
           </div>
           <Link to={`${product.id}`}>
-          <img className="image-responsive"
-            src={product.image}
+          <Image className="image-responsive"
+            src={product.image} thumbnail
             
             alt="Avatar"
             // style={{ width: "250px", height: "250px" }}  
