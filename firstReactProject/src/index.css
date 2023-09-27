@@ -84,6 +84,10 @@ button:focus-visible {
   background-color: #6a6a6a;
   height: 40px;
 }
+footer{
+  background-color: #6a6a6a;
+  height: 40px;
+}
 .search-input{
   height: 40px;
   width: 300px;
@@ -100,18 +104,28 @@ button:focus-visible {
   padding: 50px;
   margin: 60px;
 }
+.login-register{
+  display: flex;
+  /* margin-left: 140px; */
+}
 
 .login-input, .register-input {
-  background-color: #535bf2;
+  /* background-color: #535bf2; */
+  margin-top: 20px;
+  
   
   
 }
 form{
   background-color: #87cafd;
   margin-top: 4px;
+  
 }
 input{
-  width: 30vh;
+  width: 45%;
+  border-radius: 4px;
+  border: 1px solid black;
+  font-size: 14px;
 }
 
 /* styles.css */

@@ -32,7 +32,7 @@ function Login() {
 
   return (
     <div className="login-input-container"> 
-      <h1>Login</h1>
+      <h4>If you're already registered, <br /> please login</h4>
       <form onSubmit={handleLogin}>
       <div className="login-input">
         <input
