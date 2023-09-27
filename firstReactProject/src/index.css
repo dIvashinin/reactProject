@@ -268,3 +268,6 @@ img:hover{
   transform: translateY(400%); /* Move the text back to its original position */
   opacity: 1; /* Make the text visible on hover */
 }
+svg{
+  margin-left: 6px;
+}

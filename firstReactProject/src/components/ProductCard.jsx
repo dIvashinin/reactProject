@@ -12,7 +12,7 @@ import Image from 'react-bootstrap/Image';
 
 function ProductCard(props) {
   const { product } = props;
-  console.log("hello");
+//   console.log("hello");
   const [showDetails, setShowDetails] = useState(false);
 const navigateTo = useNavigate()
   const handleButtonClick = () => {
@@ -80,11 +80,25 @@ const navigateTo = useNavigate()
           >more about</button>  */}
         
           <Link className="more" to={`${product.id}`}>more about...</Link>
+          <div className="buttonCardFav">
           <button className="cardButton2">add to cart</button>
+          <button className="FavItem">add to     
+           <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="14"
+        height="14"
+        fill="darkred"
+        className="bi bi-heart"
+        viewBox="0 0 16 16"
+      >
+        <path d="M8 14s-1.5-2.166-3-3.5C3.5 9.166 2 7 2 4.5 2 2.5 3.5 1 5.5 1c1.305 0 2.498.791 3 1.999C8.002 1.791 9.195 1 10.5 1 12.5 1 14 2.5 14 4.5c0 2.5-1.5 4.666-3 6.5-1.5 1.334-3 3.5-3 3.5z" />
+      </svg>
+          </button>
+          </div>
           {/*  */}
           {/* <Link> */}
-          <div className="icon-container">
-            *
+          {/* <div className="icon-container"> */}
+            {/* * */}
           {/* <svg
         xmlns="http://www.w3.org/2000/svg"
         width="26"
@@ -97,7 +111,7 @@ const navigateTo = useNavigate()
       </svg> */}
           </div>
           {/* </Link> */}
-          </div>
+          {/* </div> */}
         {/* </div> */}
         {/* <div className="flip-card-back"> */}
         {/* <h3>{product.title}</h3>
