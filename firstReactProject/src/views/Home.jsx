@@ -44,7 +44,7 @@ function Home() {
     <div className="home">
       <h1>FAKE.STORE home</h1>
 
-      <Navbar />
+      {/* <Navbar /> */}
 
       <section>this is a home page of FAKE.STORE</section>
       <section>

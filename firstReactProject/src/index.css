@@ -80,9 +80,39 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+.searchbar{
+  background-color: #6a6a6a;
+  height: 40px;
+}
+.search-input{
+  height: 40px;
+  width: 300px;
+}
+.login-input-container, .register-input-container{
+  border: 1px solid black;
+  /* height: 500px; */
+  /* width: 500px; */
+  background-color: #ccd9e4;
+  display: grid;
+  /* justify-content: center; */
+  /* align-items: center; */
+  height: 50vh;
+  padding: 50px;
+  margin: 60px;
+}
 
-
-
+.login-input, .register-input {
+  background-color: #535bf2;
+  
+  
+}
+form{
+  background-color: #87cafd;
+  margin-top: 4px;
+}
+input{
+  width: 30vh;
+}
 
 /* styles.css */
 /* .image-responsive {

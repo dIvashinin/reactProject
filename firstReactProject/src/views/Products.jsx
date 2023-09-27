@@ -6,6 +6,8 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
+
+
 function Products() {
 
     // Subscribe component to the context
@@ -56,9 +58,10 @@ console.log('filteredProducts :>> ', filteredProducts);
    return (
     <div className='sticky-header'>
         <h1 className='fake-store'>FAKE.STORE</h1>
-        
-    <div>
-        <input type="text" placeholder='search me...' onChange={inputChangeHandler}/>
+  
+
+    <div className='searchbar'>
+        <input className='search-input' type="text" placeholder='search me...' onChange={inputChangeHandler}/>
     </div>
     <Container fluid>
     <Row >

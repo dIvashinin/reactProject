@@ -31,29 +31,31 @@ function Login() {
   };
 
   return (
-    <>
+    <div className="login-input-container"> 
       <h1>Login</h1>
       <form onSubmit={handleLogin}>
+      <div className="login-input">
         <input
           type="text"
           id="email"
-          placeholder="your e-mail here"
+          placeholder="enter your e-mail here"
           onChange={handleEmailChange}
         />
-        <label htmlFor="email"> Email</label> <br />
+        <label htmlFor="email"> </label> <br />
         <input
           type="password"
           id="password"
-          placeholder="your password here"
+          placeholder="enter your password here"
           onChange={handlePasswordChange}
         />
-        <label htmlFor="password"> Password</label> <br />
+        </div>
+        <label htmlFor="password"> </label> <br />
         {/* button is of type "submit" by default */}
         {/* Depending on the user's login state, we either display "Login" or "Logout" 
          as the button text and handle the appropriate action accordingly when the button is clicked. */}
         <button>{user ? "Logout" : "Login"}</button>
       </form>
-    </>
+    </div>
   );
 }
 

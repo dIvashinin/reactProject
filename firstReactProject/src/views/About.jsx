@@ -7,7 +7,7 @@ function About() {
     <div className="about">
       <h1>FAKE.STORE about</h1>
 
-      <Navbar />
+      {/* <Navbar /> */}
 
       <section>here you can find some info about the FAKE.STORE</section>
       <section>what is our mission and goal</section>
