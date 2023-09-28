@@ -21,6 +21,7 @@ function MyNavbar() {
             <Nav.Link href="products">Products</Nav.Link>
             <Nav.Link href="about">About</Nav.Link>
             <div className="login-register">
+            <Nav.Link href="chat"><span style={{ color: "blue" }}>Chat</span></Nav.Link>  
             <Nav.Link href="register"><span style={{ color: "orange" }}>Register</span></Nav.Link>
             <Nav.Link href="login"><span style={{ color: "red" }}>Login</span></Nav.Link>
             </div>

@@ -24,9 +24,10 @@ import Register from "./views/Register";
 import { AuthContextProvider } from "./context/AuthContext";
 import Login from "./views/Login";
 import { db } from "./config/firebaseConfig";
+import Chat from "./views/Chat";
 
 function App() {
-  console.log('db :>> ', db);
+  // console.log('db :>> ', db);
   // we create a variable to make router work
   const router = createBrowserRouter(
     createRoutesFromElements(
@@ -35,12 +36,14 @@ function App() {
         <Route path="products" element={<Products />} />
         <Route path="register" element={<Register />} />
         <Route path="login" element={<Login />} />
+        <Route path="chat" element={<Chat />} />
         <Route path="products/:productId" element={<ProductDetails />} />
         <Route
           path="about"
           element={
             <ProtectedRoute>
               <About />
+              {/* <Chat/> */}
             </ProtectedRoute>
           }
         />
