@@ -23,8 +23,10 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import Register from "./views/Register";
 import { AuthContextProvider } from "./context/AuthContext";
 import Login from "./views/Login";
+import { db } from "./config/firebaseConfig";
 
 function App() {
+  console.log('db :>> ', db);
   // we create a variable to make router work
   const router = createBrowserRouter(
     createRoutesFromElements(
