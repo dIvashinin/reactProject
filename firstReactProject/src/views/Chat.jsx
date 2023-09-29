@@ -28,6 +28,14 @@ function Chat() {
     <div>
       <h1>Chat</h1>
       {/* Display messages here */}
+      <div>
+        {chatMessages && chatMessages.map((msg) =>{
+            return <div>
+              <p>{msg.author}</p> 
+              <p>{msg.text}</p>  
+            </div>
+        })}
+      </div>
     </div>
   );
 }
