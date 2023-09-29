@@ -4,7 +4,7 @@ import { db } from "../config/firebaseConfig";
 
 function Chat() {
   //2.Store messages in a variable (state variable)
-  const [chatMessages, setChatMessages] = useState({});
+  const [chatMessages, setChatMessages] = useState([]);
 
   //1.Get documents from our Database
   const getMessages = async () => {
@@ -27,13 +27,15 @@ function Chat() {
   return (
     <div>
       <h1>Chat</h1>
-      {/* Display messages here */}
+      {/* 3. Display messages here */}
       <div>
-        {chatMessages && chatMessages.map((msg) =>{
-            return <div>
+    {chatMessages && chatMessages.map((msg) =>{
+            return ( 
+            <div>
               <p>{msg.author}</p> 
               <p>{msg.text}</p>  
             </div>
+            );
         })}
       </div>
     </div>
