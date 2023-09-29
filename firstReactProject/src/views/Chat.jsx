@@ -16,6 +16,8 @@ function Chat() {
       messagesArray.push(doc.data());
     });
     console.log('messagesArray :>> ', messagesArray);
+    // we got messages, then we need to store them:
+    setChatMessages(messagesArray);
   };
 
   useEffect(() => {
