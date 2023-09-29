@@ -6,6 +6,12 @@ function Chat() {
   //2.Store messages in a variable (state variable)
   const [chatMessages, setChatMessages] = useState([]);
 
+ //5. Store message when we type
+ const [textMsg, setTextMsg] = useState("");
+
+ //6. Create function to store typed text in textMsg variable
+// we do it directly in the input
+
   //1.Get documents from our Database
   const getMessages = async () => {
     const querySnapshot = await getDocs(collection(db, "chat"));
@@ -24,9 +30,14 @@ function Chat() {
   const formatDate = (date) => {
     // console.log('date :>> ', typeof date, date);
     // console.log('now :>> ', new Date(9999912443111));
+    // we multiply seconds by *1000 in order to have milliseconds
     const formattedDate = new Date(date*1000).toLocaleString();
     console.log('formattedDate :>> ', formattedDate);
     return formattedDate;
+  };
+
+  const submitMessage = () => {
+    console.log('textMsg :>> ', textMsg);
   }
 
   useEffect(() => {
@@ -36,6 +47,14 @@ function Chat() {
   return (
     <div>
       <h1>Chat</h1>
+    {/* 4. Crete input to write message */}
+    <div>
+        <input type="text" onChange={(event)=>{
+            setTextMsg(event.target.value);
+        }}/>
+        <button onClick={submitMessage}>send</button>
+    </div>
+
       {/* 3. Display messages here */}
       <div>
     {chatMessages && chatMessages.map((msg, index) =>{
