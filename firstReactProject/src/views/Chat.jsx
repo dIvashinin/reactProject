@@ -20,6 +20,15 @@ function Chat() {
     setChatMessages(messagesArray);
   };
 
+  //in order to correctly display our date, we need to transform it
+  const formatDate = (date) => {
+    // console.log('date :>> ', typeof date, date);
+    // console.log('now :>> ', new Date(9999912443111));
+    const formattedDate = new Date(date*1000).toLocaleString();
+    console.log('formattedDate :>> ', formattedDate);
+    return formattedDate;
+  }
+
   useEffect(() => {
     getMessages();
   }, []);
@@ -29,11 +38,12 @@ function Chat() {
       <h1>Chat</h1>
       {/* 3. Display messages here */}
       <div>
-    {chatMessages && chatMessages.map((msg) =>{
+    {chatMessages && chatMessages.map((msg, index) =>{
             return ( 
-            <div>
-              <p>{msg.author}</p> 
-              <p>{msg.text}</p>  
+            <div key={index} className="chat-container">
+              <p>author: {msg.author}</p> 
+              <p>message: {msg.text}</p> 
+              <p>sent: {formatDate(msg.date.seconds)}</p> 
             </div>
             );
         })}

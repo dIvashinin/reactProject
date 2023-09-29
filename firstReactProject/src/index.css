@@ -108,13 +108,17 @@ footer{
   display: flex;
   /* margin-left: 140px; */
 }
+.chat-container {
+  border: 1px solid black;
+  background-color: #ccd9e4; 
+  display: grid;
+  padding: 10px;
+  margin: 20px;
+}
 
-.login-input, .register-input {
+.login-input, .register-input{
   /* background-color: #535bf2; */
   margin-top: 20px;
-  
-  
-  
 }
 form{
   background-color: #87cafd;
