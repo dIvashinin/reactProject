@@ -4,7 +4,7 @@ import {
   signInWithEmailAndPassword,
   onAuthStateChanged,
   getAuth,
-  signOut
+  signOut,
 } from "firebase/auth";
 import { auth } from "../config/firebaseConfig";
 
@@ -28,9 +28,8 @@ export const AuthContextProvider = ({ children }) => {
       })
       .catch((error) => {
         // An error happened.
-        console.log('error signing out :>> ', error);
+        console.log("error signing out :>> ", error);
       });
-
   };
 
   // here the original from google, we will transform it into async/ await below

@@ -38,8 +38,22 @@ function App() {
         <Route path="login" element={<Login />} />
         {/* <Route path="chat" element={<Chat />} /> */}
         <Route path="products/:productId" element={<ProductDetails />} />
-        <Route path="about" element={<ProtectedRoute><About /></ProtectedRoute>}/>
-        <Route path="chat" element={<ProtectedRoute><Chat /></ProtectedRoute>}/>
+        <Route
+          path="about"
+          element={
+            <ProtectedRoute>
+              <About />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="chat"
+          element={
+            <ProtectedRoute>
+              <Chat />
+            </ProtectedRoute>
+          }
+        />
         {/* <Route path="*" element={<ErrorPage/>}/> */}
       </Route>
     )
