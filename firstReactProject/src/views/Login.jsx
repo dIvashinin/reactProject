@@ -31,23 +31,25 @@ function Login() {
   };
 
   return (
-    <div className="login-input-container"> 
-      <h4>If you're already registered, <br /> please login</h4>
+    <div className="login-input-container">
+      <h4>
+        If you're already registered, <br /> please login
+      </h4>
       <form onSubmit={handleLogin}>
-      <div className="login-input">
-        <input
-          type="text"
-          id="email"
-          placeholder="enter your e-mail here"
-          onChange={handleEmailChange}
-        />
-        <label htmlFor="email"> </label> <br />
-        <input
-          type="password"
-          id="password"
-          placeholder="enter your password here"
-          onChange={handlePasswordChange}
-        />
+        <div className="login-input">
+          <input
+            type="text"
+            id="email"
+            placeholder="enter your e-mail here"
+            onChange={handleEmailChange}
+          />
+          <label htmlFor="email"> </label> <br />
+          <input
+            type="password"
+            id="password"
+            placeholder="enter your password here"
+            onChange={handlePasswordChange}
+          />
         </div>
         <label htmlFor="password"> </label> <br />
         {/* button is of type "submit" by default */}
