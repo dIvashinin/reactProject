@@ -26,22 +26,25 @@ function Register() {
 
   return (
     <div className="register-input-container">
-      <h4>Are you a new user? <br />Then please register!</h4>
+      <h4>
+        Are you a new user? <br />
+        Then please register!
+      </h4>
       <form onSubmit={handleRegister}>
         <div className="register-input">
-        <input
-          type="text"
-          id="email"
-          placeholder="enter your e-mail here"
-          onChange={handleEmailChange}
-        />
-        <label htmlFor="email"> </label> <br />
-        <input
-          type="password"
-          id="password"
-          placeholder="enter your password here"
-          onChange={handlePasswordChange}
-        />
+          <input
+            type="text"
+            id="email"
+            placeholder="enter your e-mail here"
+            onChange={handleEmailChange}
+          />
+          <label htmlFor="email"> </label> <br />
+          <input
+            type="password"
+            id="password"
+            placeholder="enter your password here"
+            onChange={handlePasswordChange}
+          />
         </div>
         <label htmlFor="password"> </label> <br />
         {/* button is of type "submit" by default */}
