@@ -48,13 +48,13 @@ function Home() {
 
       <section>this is a home page of FAKE.STORE</section>
       <section>
-        we have
-        <span style={{ color: "red" }}> {products.length}</span> selected fake
-        products <br /> with a price range of{" "}
-        <span style={{ color: "red" }}>
-          {minPrice} EUR - {maxPrice} EUR
-        </span>{" "}
-        <br /> and a lot more for your taste
+        we have selected fake products <br /> 
+        {/* <span style={{ color: "red" }}> {products.length}</span>  */} 
+        {/* with a price range of */}
+        {/* {" "}<span style={{ color: "red" }}> */}
+          {/* {minPrice} EUR - {maxPrice} EUR */}
+        {/* </span>{" "}<br />  */}
+        and a lot more for your taste
       </section>
       <section>go check yourself</section>
       <img className="fake" src="/pics/fake.jpeg" alt="" />
