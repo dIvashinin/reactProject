@@ -15,16 +15,16 @@ function MyNavbar() {
     <>
     <Navbar bg="light" data-bs-theme="light" sticky="top">
         <Container fluid>
-          <Navbar.Brand href="/">FAKE.STORE</Navbar.Brand>
+          <Navbar.Brand to="/" as={NavLink}>FAKE.STORE</Navbar.Brand>
           <Nav className="me-auto">
             {/* redo */}
             <Nav.Link to="/" as={NavLink}>Home</Nav.Link>
-            <Nav.Link href="products">Products</Nav.Link>
-            <Nav.Link href="about">About</Nav.Link>
+            <Nav.Link to="products" as={NavLink}>Products</Nav.Link>
+            <Nav.Link to="about" as={NavLink} >About</Nav.Link>
             <div className="login-register">
-            <Nav.Link href="chat"><span style={{ color: "blue" }}>Chat</span></Nav.Link>  
-            <Nav.Link href="register"><span style={{ color: "orange" }}>Register</span></Nav.Link>
-            <Nav.Link href="login"><span style={{ color: "red" }}>Login</span></Nav.Link>
+            <Nav.Link to="chat" as={NavLink}><span style={{ color: "blue" }}>Chat</span></Nav.Link>  
+            <Nav.Link to="register" as={NavLink}><span style={{ color: "orange" }}>Register</span></Nav.Link>
+            <Nav.Link to="login" as={NavLink}><span style={{ color: "red" }}>Login</span></Nav.Link>
             </div>
           </Nav>
         </Container>
