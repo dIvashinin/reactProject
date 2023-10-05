@@ -17,7 +17,8 @@ function MyNavbar() {
         <Container fluid>
           <Navbar.Brand href="/">FAKE.STORE</Navbar.Brand>
           <Nav className="me-auto">
-            <Nav.Link href="/">Home</Nav.Link>
+            {/* redo */}
+            <Nav.Link to="/" as={NavLink}>Home</Nav.Link>
             <Nav.Link href="products">Products</Nav.Link>
             <Nav.Link href="about">About</Nav.Link>
             <div className="login-register">
