@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import { AuthContext } from "../context/AuthContext";
-import { auth } from "../config/firebaseConfig";
+// import { auth } from "../config/firebaseConfig";
 
 function Login() {
   const { login, user, logout } = useContext(AuthContext);

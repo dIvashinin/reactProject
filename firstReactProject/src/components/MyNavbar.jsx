@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
@@ -7,7 +7,7 @@ import Navbar from 'react-bootstrap/Navbar';
 
 function MyNavbar() {
 
-  const {user, setUser, logout} = useContext (AuthContext);
+  // const {user, setUser, logout} = useContext (AuthContext);
 
   return (
 

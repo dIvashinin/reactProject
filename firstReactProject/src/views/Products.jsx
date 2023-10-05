@@ -1,10 +1,10 @@
 import React, { useContext, useEffect, useState } from "react";
 import ProductCard from "../components/ProductCard";
-import SearchBar from "../components/SearchBar";
+// import SearchBar from "../components/SearchBar";
 import { ProductsContext } from "../context/ProductsContext";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
+// import Col from "react-bootstrap/Col";
 
 function Products() {
   // Subscribe component to the context

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import ProductDetails from "./ProductDetails";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
+// import Container from "react-bootstrap/Container";
+// import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Image from "react-bootstrap/Image";
 

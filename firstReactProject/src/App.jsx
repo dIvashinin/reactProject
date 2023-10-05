@@ -3,15 +3,15 @@ import {
   createBrowserRouter,
   Route,
   RouterProvider,
-  Link,
+  // Link,
   Outlet,
 } from "react-router-dom";
 
 import "./App.css";
 import About from "./views/About";
 import Home from "./views/Home";
-import Students from "./components/Students";
-import Characters from "./views/Characters";
+// import Students from "./components/Students";
+// import Characters from "./views/Characters";
 import Products from "./views/Products";
 import MyNavbar from "./components/MyNavbar";
 import ErrorPage from "./views/ErrorPage";
@@ -23,7 +23,7 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import Register from "./views/Register";
 import { AuthContextProvider } from "./context/AuthContext";
 import Login from "./views/Login";
-import { db } from "./config/firebaseConfig";
+// import { db } from "./config/firebaseConfig";
 import Chat from "./views/Chat";
 
 function App() {
