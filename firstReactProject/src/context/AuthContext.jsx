@@ -72,8 +72,8 @@ export const AuthContextProvider = ({ children }) => {
       const user = userCredential.user;
       console.log("register success :>> ", user);
     } catch (error) {
-      const errorCode = error.code;
-      const errorMessage = error.message;
+    //   const errorCode = error.code;
+    //   const errorMessage = error.message;
       console.log("register went wrong :>> ", error);
     }
   };
@@ -91,7 +91,7 @@ export const AuthContextProvider = ({ children }) => {
       setUser(user);
     } catch (error) {
       const errorCode = error.code;
-      const errorMessage = error.message;
+    //   const errorMessage = error.message;
       console.log("login went wrong :>> ", error);
       console.log("errorCode :>> ", errorCode);
     }
