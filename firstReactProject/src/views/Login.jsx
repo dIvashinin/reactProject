@@ -42,6 +42,7 @@ function Login() {
             id="email"
             placeholder="enter your e-mail here"
             onChange={handleEmailChange}
+            autoComplete="email"
           />
           <label htmlFor="email"> </label> <br />
           <input
@@ -49,6 +50,7 @@ function Login() {
             id="password"
             placeholder="enter your password here"
             onChange={handlePasswordChange}
+            autoComplete="new-password"
           />
         </div>
         <label htmlFor="password"> </label> <br />

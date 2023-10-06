@@ -55,6 +55,7 @@ function Products() {
 
       <div className="searchbar">
         <input
+            id="mySearchInput"
           className="search-input"
           type="text"
           placeholder="search me..."

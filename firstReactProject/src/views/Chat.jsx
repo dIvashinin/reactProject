@@ -78,10 +78,12 @@ const unsubscribe = onSnapshot(q, (querySnapshot) => {
       <h1>Chat</h1>
     {/* 4. Crete input to write message */}
     <div>
-        <input type="text" onChange={(event)=>{
+    <form id="myForm">
+        <input id="myChatInput" type="text" onChange={(event)=>{
             setTextMsg(event.target.value);
         }}/>
         <button onClick={submitMessage}>send</button>
+        </form>
     </div>
 
       {/* 3. Display messages here */}
